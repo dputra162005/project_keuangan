@@ -15,7 +15,6 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            
             $table->date('date');
             $table->enum('type', ['pemasukan', 'pengeluaran']);
             $table->decimal('amount', 15, 2);
